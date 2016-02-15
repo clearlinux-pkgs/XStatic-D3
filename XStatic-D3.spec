@@ -4,7 +4,7 @@
 #
 Name     : XStatic-D3
 Version  : 3.1.6.2
-Release  : 9
+Release  : 10
 URL      : https://pypi.python.org/packages/source/X/XStatic-D3/XStatic-D3-3.1.6.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/X/XStatic-D3/XStatic-D3-3.1.6.2.tar.gz
 Summary  : D3 3.1.6 (XStatic packaging standard)
