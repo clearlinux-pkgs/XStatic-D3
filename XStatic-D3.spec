@@ -4,30 +4,33 @@
 #
 Name     : XStatic-D3
 Version  : 3.5.17.0
-Release  : 16
-URL      : https://github.com/openstack/xstatic-d3/archive/3.5.17.0.tar.gz
-Source0  : https://github.com/openstack/xstatic-d3/archive/3.5.17.0.tar.gz
-Summary  : No detailed summary available
+Release  : 17
+URL      : https://files.pythonhosted.org/packages/18/e0/6f6485a34d56084485900f03278c2140e6eb8e079bb255a5c17b082ab881/XStatic-D3-3.5.17.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/18/e0/6f6485a34d56084485900f03278c2140e6eb8e079bb255a5c17b082ab881/XStatic-D3-3.5.17.0.tar.gz
+Summary  : D3 3.5.17 (XStatic packaging standard)
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: XStatic-D3-python3
 Requires: XStatic-D3-python
 BuildRequires : buildreq-distutils3
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : virtualenv
 
 %description
-XStatic-D3
 --------------
-D3 JavaScript library packaged for setuptools (easy_install) / pip.
+        
+        D3 JavaScript library packaged for setuptools (easy_install) / pip.
+        
+        This package is intended to be used by **any** project that needs these files.
+        
+        It intentionally does **not** provide any extra code except some metadata
+        **nor** has any extra requirements. You MAY use some minimal support code from
+        the XStatic base package, if you like.
+        
+        You can find more info about the xstatic packaging way in the package `XStatic`.
 
 %package python
 Summary: python components for the XStatic-D3 package.
 Group: Default
-Requires: XStatic-D3-python3
+Requires: XStatic-D3-python3 = %{version}-%{release}
 Provides: xstatic-d3-python
 
 %description python
@@ -44,14 +47,14 @@ python3 components for the XStatic-D3 package.
 
 
 %prep
-%setup -q -n xstatic-d3-3.5.17.0
+%setup -q -n XStatic-D3-3.5.17.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533916015
+export SOURCE_DATE_EPOCH=1537814882
 python3 setup.py build -b py3
 
 %install
