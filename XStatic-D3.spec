@@ -4,7 +4,7 @@
 #
 Name     : XStatic-D3
 Version  : 3.5.17.0
-Release  : 23
+Release  : 24
 URL      : https://files.pythonhosted.org/packages/18/e0/6f6485a34d56084485900f03278c2140e6eb8e079bb255a5c17b082ab881/XStatic-D3-3.5.17.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/18/e0/6f6485a34d56084485900f03278c2140e6eb8e079bb255a5c17b082ab881/XStatic-D3-3.5.17.0.tar.gz
 Summary  : D3 3.5.17 (XStatic packaging standard)
@@ -15,18 +15,17 @@ Requires: XStatic-D3-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-XStatic-D3
 --------------
-
-D3 JavaScript library packaged for setuptools (easy_install) / pip.
-
-This package is intended to be used by **any** project that needs these files.
-
-It intentionally does **not** provide any extra code except some metadata
-**nor** has any extra requirements. You MAY use some minimal support code from
-the XStatic base package, if you like.
-
-You can find more info about the xstatic packaging way in the package `XStatic`.
+        
+        D3 JavaScript library packaged for setuptools (easy_install) / pip.
+        
+        This package is intended to be used by **any** project that needs these files.
+        
+        It intentionally does **not** provide any extra code except some metadata
+        **nor** has any extra requirements. You MAY use some minimal support code from
+        the XStatic base package, if you like.
+        
+        You can find more info about the xstatic packaging way in the package `XStatic`.
 
 %package python
 Summary: python components for the XStatic-D3 package.
@@ -42,7 +41,7 @@ python components for the XStatic-D3 package.
 Summary: python3 components for the XStatic-D3 package.
 Group: Default
 Requires: python3-core
-Provides: pypi(XStatic-D3)
+Provides: pypi(xstatic_d3)
 
 %description python3
 python3 components for the XStatic-D3 package.
@@ -57,8 +56,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582851788
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583525932
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
